@@ -1,0 +1,639 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Roboto:wght@300..700&display=swap');
+$primary: #000549;
+// #6a2fea;
+$line-height-base: 1.8;
+$font-size-base: 1.2rem;
+$font-family-base: 'Roboto', sans-serif;
+$headings-font-family: 'Montserrat', sans-serif;
+$headings-font-weight: 700;
+$font-weight-base: 300;
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination-bullet-active {
+    color: $primary;
+}
+
+.footer {
+    background-color: $primary;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.buttonNav {
+    transition: all 0.25s ease;
+}
+
+.backButton {
+    border-radius: 0;
+    margin-left: auto;
+    width: fit-content;
+    position: relative;
+    top: 3px;
+    right: 4px;
+}
+
+.backBack {
+    width: 100px;
+    height: 100px;
+    pointer-events: all;
+    transition: all 0.3s ease;
+
+    &:hover {
+        filter: brightness(1.6);
+    }
+}
+
+.effectButton:hover {
+    transition: all 0.3s ease;
+    filter: brightness(.6);
+}
+
+.blurVid {
+    position: absolute;
+    z-index: -5;
+    opacity: 1;
+    object-fit: fill;
+    filter: saturate(2);
+}
+
+.backDrop{
+    backdrop-filter: blur(35px);
+}
+
+// @supports(backdrop-filter: blur(10px)) {
+//     .blurVid {
+//         filter: none;
+//         backdrop-filter: blur(35px)
+//     }
+// }
+
+.blurImg {
+    object-fit: cover;
+    position: absolute;
+    z-index: -3;
+    //filter: blur(35px);
+    opacity: .4;
+    transition: transform 50s;
+    width: 4000px;
+    height: 4000px;
+    position: relative;
+    left: -1000px;
+    top: -1000px;
+}
+
+.blurTrans {
+    transform: rotate(320deg);
+}
+
+.react-transform-component {
+    width: unset !important;
+    height: unset !important;
+}
+
+.react-transform-element {
+    width: unset !important;
+    height: unset !important;
+}
+
+.swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: $primary;
+
+}
+
+.swiper-pagination-bullets {
+    transform: scale(1.75);
+}
+
+.body {
+    margin: 0;
+    //font-weight: 300;
+    // font-size: 18px;
+}
+
+.sCardC>div {
+    border-right: 1px solid #E6ECF8;
+    min-width: 200px;
+}
+
+figcaption {
+    padding: .5em .5em;
+    margin: 0;
+    margin-top: 0px;
+    background-color: #f9f9f9;
+    font-size: 16px !important;
+    color: rgba(51, 51, 51, 0.75) !important;
+    text-align: center;
+}
+
+
+@media(min-width: 768px) {
+    .__se__float-right {
+        float: right;
+        padding: 5px;
+        padding-top: 0;
+    }
+
+    .__se__float-left {
+        float: left;
+        padding: 5px;
+        padding-top: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .nav-logo {
+        width: 32px !important;
+    }
+
+    .sCardC>div {
+        border-right: 0px solid #E6ECF8;
+        border-bottom: 1px solid #E6ECF8;
+    }
+
+    .sCardC,
+    .sRow {
+        flex-direction: column;
+    }
+
+    .sRow>div {
+        margin-bottom: 0.75em;
+        padding: 0.75rem;
+    }
+
+    .modal-body,
+    .modal-dialog {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next,
+    .logo {
+        display: none !important;
+    }
+
+    .swiper-pagination-bullets {
+        transform: unset;
+    }
+
+    .button-container {
+        flex-direction: row;
+    }
+
+    .visitSec {
+        padding-bottom: 115px;
+
+    }
+
+    .recText {
+        &>br {
+            display: none;
+        }
+    }
+
+    .formEmail>div {
+        flex-direction: column;
+    }
+
+    .btn-round {
+        width: auto !important;
+        max-width: unset !important;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+
+    .cImg {
+        width: 100% !important;
+    }
+}
+
+.button-container {
+    flex-direction: row-reverse;
+}
+
+.sCardC>div:last-child {
+    border-right: none;
+    border-bottom: none;
+}
+
+.App {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+}
+
+.cards-container {
+    margin: 30px 0 0 0;
+    /* height: 500px; */
+    width: 500px;
+    overflow-y: Scroll;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.card2 {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    max-width: 498px;
+    width: 498px;
+
+}
+
+.card {
+    margin-bottom: 30px;
+    border-radius: 12px;
+}
+
+.nav-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: white;
+    border-radius: 5px;
+}
+
+.nav-link:focus {
+    background: transparent !important;
+}
+
+.nav-link:focus {
+    background-color: rgba(255, 255, 255, .55);
+    color: #6a2fea !important;
+}
+
+.active {
+    background-color: #0099FF;
+}
+
+.py-10 {
+    padding-bottom: 7rem;
+    padding-top: 7rem;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400,
+.form-control {
+    font-weight: 400;
+}
+
+path {
+    transition: fill .3s;
+}
+
+.aSpecial {
+    color: rgba(255, 255, 255, 1);
+    border: 2px rgba(255, 255, 255, 0.3) solid;
+    border-radius: 10px;
+
+    path {
+        fill: rgba(255, 255, 255, 1);
+    }
+
+    &:hover {
+        color: $primary;
+        background-color: rgba(255, 255, 255, 1);
+
+        &>.bSpecial {
+            path {
+                fill: $primary;
+            }
+        }
+    }
+}
+
+.bSpecial {
+    margin: auto;
+    width: 23px;
+    position: relative;
+    top: -2px;
+}
+
+.subjButton {
+    cursor: pointer;
+
+    &:hover {
+        background-color: #d1d7dc;
+    }
+
+    &:focus {
+        background-color: #d1d7dc;
+    }
+}
+
+.accordion-button {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.accordion-button::after {
+    position: relative;
+    right: -5px;
+}
+
+.chapIndex {
+    font-size: 14px;
+    font-weight: 400;
+
+    @media(max-width: 1199px) {
+        max-width: 200px;
+    }
+
+    @media(min-width: 1200px) {
+        position: relative;
+        width: 250px !important;
+        left: -250px;
+    }
+
+}
+
+.optional {
+    transition: opacity 0.2s ease 1.5s;
+
+    &:hover {
+        opacity: 100% !important;
+        transition-delay: 0s;
+    }
+}
+
+.contentContainer {
+    @media(min-width: 1200px) {
+        max-width: 700px;
+
+        .sticky {
+            width: 0;
+        }
+    }
+
+    @media(min-width: 1400px) {
+        max-width: 900px;
+    }
+
+    @media(min-width: 1700px) {
+        max-width: 1200px;
+    }
+}
+
+.topiButton {
+    color: #6a6f73;
+    font-size: 12px;
+}
+
+.ective {
+    background-color: #d1d7dc;
+}
+
+.mClass {
+    display: flex;
+    width: auto;
+    opacity: 0;
+    transition: all .2s ease-out;
+    transform: translateY(-11px);
+}
+
+.mClassShow {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.mClassShowDown {
+    transform: translateY(21px);
+    opacity: 0;
+}
+
+.cClass {
+    transition: all .06s ease-out;
+    opacity: 0;
+    transform: translateY(-6px);
+
+    @media only screen and (max-width: 768px) {
+        transition: none;
+    }
+
+    //position: sticky;
+}
+
+.cClassShow {
+    transition: all .6s ease;
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.cClassHide {
+    transform: translateY(21px);
+    opacity: 0;
+}
+
+
+.mContainer {
+
+    min-height: 800px;
+
+    &>div:nth-child(1)>div {
+        min-width: 25rem;
+        max-width: 30rem;
+    }
+
+    @media only screen and (max-width: 768px) {
+        &>div:nth-child(1)>div {
+            min-width: unset;
+            max-width: 30rem;
+        }
+    }
+}
+
+.box {
+    overflow: hidden;
+}
+
+.hid-box {
+    position: absolute;
+    bottom: 0;
+    height: 48px;
+    width: 100%;
+    transition-property: all;
+    transition-duration: .2s;
+    transition-timing-function: ease;
+}
+
+.hid-box2 {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    transition-property: all;
+    transition-duration: .2s;
+    transition-timing-function: ease;
+    overflow: hidden;
+    animation-delay: 0ms;
+}
+
+.hid-box3 {
+    opacity: 0;
+    transition-property: all;
+    transition-duration: .35s;
+    transition-timing-function: ease;
+    overflow: hidden;
+}
+
+.hid-box4 {
+    transition-property: all;
+    transition-duration: .4s;
+    transition-timing-function: ease;
+    background: rgba(0, 0, 0, .4);
+    height: 100%;
+    opacity: 1;
+}
+
+.hid-box5 {
+    transition-property: all;
+    transition-duration: .6s;
+    transition-timing-function: ease;
+    background: rgba(0, 0, 0, 0);
+    height: 100%;
+    opacity: 1;
+}
+
+.react-collapse-simple-wrapper {
+    position: absolute;
+    bottom: 0;
+}
+
+@for $i from 0 through 10 {
+    .hid-box4 div:nth-child(#{$i}n) {
+        transition-delay: #{$i * 10}ms;
+    }
+}
+
+@for $i from 0 through 10 {
+    .hid-box5 div:nth-child(#{$i}n) {
+        transition-delay: #{(10-$i) * 10}ms;
+    }
+}
+
+.modal-dialog {
+    transition: 'transform .15s ease-out';
+}
+
+.modal-content {
+    background-color: $dark;
+    color: #fff;
+
+}
+
+.modal-content .btn-close {
+    filter: invert(100%);
+    margin: unset;
+    margin-left: 10px;
+}
+
+.fade {
+    transition-duration: .25s !important;
+}
+
+
+.swiper-slide {
+    box-shadow: 100px 0px 300px #212529;
+}
+
+.form-label {
+    color: rgba(41, 51, 71, 0.65);
+    font-weight: 400;
+}
+
+.btn-round {
+    max-height: 54px;
+    border-radius: 50px;
+    border-width: 2px;
+    font-weight: bold;
+    color: $primary;
+    max-width: 170px;
+    width: 170px;
+    font-weight: 400;
+}
+
+.brows {
+    transition: top .25s ease;
+    position: absolute;
+    top: 0;
+}
+
+.form-control {
+    transition: all .2s ease;
+    // transition: color 1s ease;
+}
+
+.recText {
+    transition: all .3s ease;
+}
+
+.smil {
+    transition: opacity 1s ease;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+.py-6 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+.visitSec {
+    background-color: rgb(106, 47, 234);
+    color: white;
+    margin-top: 10rem;
+    padding-top: 10rem;
+    height: 0px;
+    margin-bottom: -35px;
+}
+
+div.wrapper-stepper:nth-child(1)>div:nth-child(1) {
+    background-position: unset !important;
+}
+
+.sun-editor {
+    border: none;
+}
+
+//chrome FIX
+@supports(-webkit-tap-highlight-color: black) {
+    .imgTri {
+        max-height: 51px !important;
+        width: auto;
+        image-rendering: pixelated;
+    }
+
+    .imgTriL {
+        max-height: 50px !important;
+        width: auto;
+        image-rendering: pixelated;
+    }
+
+    .imgButton {
+        max-width: 22px !important;
+        image-rendering: pixelated;
+    }
+
+    .imgButton1 {
+        max-width: 21px !important;
+        image-rendering: pixelated;
+        top: -3px !important;
+    }
+}
